@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Title</title>
+</head>
+<body>
+<h3>Secure Page</h3>
+<a href="/logout">Logout</a>
+<h4>email</h4>
+<p th:text="${user.email}"></p><br/>
+<h4>Last Name</h4>
+<p th:text="${user.lastName}"></p>
+
+<h3>Send and email! </h3>
+<a href="/addEmail/{id}"> Send here</a>
+<a th:href="@{/sendemail/{id}(id=${user.id})}">Send Email</a>
+</body>
+</html>
